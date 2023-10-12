@@ -1,18 +1,9 @@
-const hour = document.querySelector('.hour');
-const min = document.querySelector('.min');
-const sec = document.querySelector('.sec');
-setInterval(()=> {
-   let date = new Date();
-   let hours = date.getHours();
-   let minutes = date.getMinutes();
-   let seconds = date.getSeconds();
+var displayHours = document.getElementById('displayhour"');
+      var displayMinutes = document.getElementById('displayMinutes');
+      var displaySeconds = document.getElementById('displaySeconds');
 
-   hour.innerHTML ='${formatTime(hours)}';
-   min.innerHTML = '${formatTime(minutes)}';
-   sec.innerHTML ='${formatTime(seconds)}'; 
+      var currentTime = new Date();
 
-}, 1000);
-
-function formatTime(time){
-    return time < 10 ? "0" + time : time;
-}
+      displayHour.innerHTML = currentTime.getHours() + " hrs";
+      displayMinutes.innerHTML = currentTime.getMinutes() + " min";
+      displaySeconds.innerHTML = currentTime.getSeconds() + " sec";
